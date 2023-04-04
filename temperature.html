@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+    <title>TEMPERATURE CONVERTER</title>
+    <style>
+        body {
+            background-color: rgba(0, 255, 255, 0.562);
+        }
+        
+        h1 {
+            color: rgb(237, 16, 16);
+            text-align: center;
+        }
+        
+        h3 {
+            text-align: center;
+            color: rgb(132, 8, 241)
+        }
+        
+        div {
+            text-align: center;
+        }
+        
+        button {
+            color: chocolate;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Temperature Converter</h1>
+    <h3>Enter a temperature in Celsius: <input type="text" id="celsius"></h3>
+    <div><button onclick="convertTemperature()">Convert to Fahrenheit</button></div>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function convertTemperature() {
+            const celsius = document.getElementById("celsius").value;
+            const fahrenheit = (celsius * 9 / 5) + 32;
+            document.getElementById("result").innerHTML = celsius + "°C is equal to " + fahrenheit + "°F";
+        }
+    </script>
+</body>
+
+</html>
